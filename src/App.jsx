@@ -4,7 +4,7 @@
  * To contain application wide settings, routes, state, etc.
  */
 
-import React from "react";
+import React, { useRef } from "react";
 
 import About from "./Components/About";
 import Footer from "./Components/Footer";
@@ -14,38 +14,36 @@ import Portfolio from "./Components/Portfolio";
 
 import "./styles.css";
 
-/**
- * This object represents your information. The project is set so that you
- * only need to update these here, and values are passed a properties to the
- * components that need that information.
- *
- * Update the values below with your information.
- *
- * If you don't have one of the social sites listed, leave it as an empty string.
- */
 const siteProps = {
-  name: "Alexandrie Grenier",
-  title: "Web Designer & Content Creator",
-  email: "alex@example.com",
-  gitHub: "microsoft",
+  name: "Josue Castillo Mollo",
+  title: "Desarrollador FRONT-END ",
+  email: "Josue.CastilloMollo@studentambassadors.com",
+  gitHub: "JosueCas123",
   instagram: "microsoft",
-  linkedIn: "satyanadella",
+  linkedIn: "josue-castillo-dev",
   medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
+  
 };
 
 const primaryColor = "#4E567E";
 const secondaryColor = "#D2F1E4";
 
 const App = () => {
+  const footerRef = useRef(null);
+
+  const scrollToFooter = () => {
+    footerRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  console.log("App props", footerRef);
   return (
     <div id="main">
       <Header />
-      <Home name={siteProps.name} title={siteProps.title} />
+      <Home name={siteProps.name} title={siteProps.title} scrollToFooter={scrollToFooter} />
       <About />
       <Portfolio />
-      <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
+
+      <Footer ref={footerRef} {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
     </div>
   );
 };

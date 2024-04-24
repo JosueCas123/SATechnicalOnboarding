@@ -6,8 +6,8 @@
  */
 
 import React from "react";
-import arrowSvg from "../images/down-arrow.svg";
-import PropTypes from "prop-types";
+
+import { FaArrowAltCircleDown } from "react-icons/fa";
 
 /**
  * Home background image
@@ -20,11 +20,12 @@ import PropTypes from "prop-types";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/woman-with-tablet.jpg";
+import image from "../images/Home.jpg";
 
 const imageAltText = "Adult female in office setting leaning against a glass wall while holding a platinum Microsoft Surface Pro 7 in tablet mode preparing to write with Microsoft Surface Pen";
 
-const Home = ({ name, title }) => {
+const Home = ({ name, title, scrollToFooter  }) => {
+ 
   return (
     <section id="home" className="min-height">
       <img className="background" src={image} alt="" />
@@ -33,20 +34,20 @@ const Home = ({ name, title }) => {
         <h2>{title}</h2>
       </div>
       <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+          
+      <button 
+        onClick={scrollToFooter}
+        style={{ background: "none", border: "none", cursor: "pointer" }}      
+        >
+        
+        <FaArrowAltCircleDown size={48} color="#4E567E" />
+      </button>
+     
       </div>
     </section>
   );
 };
 
-Home.defaultProps = {
-  name: "",
-  title: "",
-};
 
-Home.propTypes = {
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};
 
 export default Home;
