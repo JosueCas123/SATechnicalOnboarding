@@ -37,22 +37,22 @@ const projectList = [
     url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Bucador de Movilidades",
     description:
       "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+    url: "https://buscador-de-movilidades.vercel.app/",
   },
   {
-    title: "My Resume Site",
+    title: "Gastos Semanales",
     description:
       "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+    url: "https://gastos-semanales.vercel.app/",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "Buscador de Resetas",
     description:
       "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+    url: "hhttps://buscador-resetas.vercel.app/",
   },
 ];
 
